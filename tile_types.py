@@ -7,7 +7,7 @@ import numpy as np  # type: ignore
 graphic_dt = np.dtype(
     [
         ("ch", np.int32),  # Unicode codepoint.
-        ("fg", "3B"),  # 3 unsigned bytes, for RGB colors.
+        ("fg", "3B"),  # 3 unsigned bytes, for RGB colors
         ("bg", "3B"),
     ]
 )
@@ -15,8 +15,8 @@ graphic_dt = np.dtype(
 # tile struct for statically defined tile data
 tile_dt = np.dtype(
     [
-        ("walkable", np.bool_),  # True if can be walked over
-        ("transparent", np.bool_),  # True if it does not block FOV
+        ("walkable", np.bool8),  # True if can be walked over
+        ("transparent", np.bool8),  # True if it does not block FOV
         ("dark", graphic_dt),  # graphics for when not in FOV
     ]
 )
